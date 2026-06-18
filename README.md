@@ -33,6 +33,22 @@ HR Assist Pro is an intelligent HR policy assistant that helps employees find an
 - ✅ ChromaDB vector database for scalable similarity search
 - ✅ Google Generative AI integration for advanced language understanding
 
+## RAG Pipeline
+
+The HR Assist Pro system follows a seven-stage RAG (Retrieval-Augmented Generation) pipeline:
+
+1. **Input Validation** - User query is checked for injection attacks and harmful content
+2. **Embedding** - Query is converted to vector representation
+3. **Semantic Retrieval** - Top-20 similar chunks retrieved from ChromaDB
+4. **Reranking** - Results are reranked to top-5 most relevant chunks using FlashRank
+5. **LLM Generation** - Gemini generates structured response with citations
+6. **Verification** - Output is verified for hallucinations
+7. **Response Delivery** - Final answer with confidence scores and sources
+
+### RAG Pipeline Diagram
+
+![RAG Pipeline Flow](./docs/images/rag-pipeline.svg)
+
 ## Architecture
 
 ```
@@ -177,6 +193,45 @@ Key packages (see `requirements.txt` for full list):
 - **pypdf** >= 4.3.0 - PDF parsing
 - **flashrank** >= 0.2.10 - Reranking
 - **reportlab** >= 4.2.0 - PDF generation
+
+## User Interface
+
+### Employee Portal
+
+The Employee Portal allows employees to ask HR policy questions and receive structured, citation-backed answers.
+
+![Employee Portal](./docs/images/employee-portal.svg)
+
+**Features:**
+- Natural language question input
+- Real-time response generation
+- Source document citations
+- Confidence scoring
+
+### HR Administrator Panel
+
+The HR Administrator Panel provides tools for managing the knowledge base and uploading new policy documents.
+
+![HR Administrator Panel](./docs/images/admin-panel.svg)
+
+**Features:**
+- PDF document upload and management
+- Indexed document overview
+- Document deletion and re-indexing
+- Metadata management
+
+### System Status Dashboard
+
+Monitor the health and performance of the HR Assist Pro system.
+
+![System Status](./docs/images/system-status.svg)
+
+**Metrics Tracked:**
+- Total indexed documents and chunks
+- Last indexing timestamp
+- API connectivity status
+- Database health
+- System operational status
 
 ## How It Works
 

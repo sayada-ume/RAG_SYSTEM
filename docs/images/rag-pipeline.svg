@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#07111f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1a2b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="800" fill="url(#grad)"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-size="28" fill="#63d2ff" font-weight="bold" text-anchor="middle">RAG Pipeline Flow</text>
+  
+  <!-- Stage 1: User Query -->
+  <rect x="50" y="80" width="200" height="100" fill="#0d1a2b" stroke="#63d2ff" stroke-width="2" rx="8"/>
+  <text x="150" y="110" font-size="14" fill="#eef4fb" font-weight="bold" text-anchor="middle">1. User Query</text>
+  <text x="150" y="135" font-size="12" fill="#9db0c8" text-anchor="middle">Natural language</text>
+  <text x="150" y="155" font-size="12" fill="#9db0c8" text-anchor="middle">question</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 250 130 L 310 130" stroke="#34d399" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Stage 2: Guardrails -->
+  <rect x="310" y="80" width="200" height="100" fill="#0d1a2b" stroke="#f59e0b" stroke-width="2" rx="8"/>
+  <text x="410" y="110" font-size="14" fill="#eef4fb" font-weight="bold" text-anchor="middle">2. Guardrails</text>
+  <text x="410" y="135" font-size="12" fill="#9db0c8" text-anchor="middle">Injection check</text>
+  <text x="410" y="155" font-size="12" fill="#9db0c8" text-anchor="middle">Harm filtering</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 510 130 L 570 130" stroke="#34d399" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Stage 3: Embedding -->
+  <rect x="570" y="80" width="200" height="100" fill="#0d1a2b" stroke="#63d2ff" stroke-width="2" rx="8"/>
+  <text x="670" y="110" font-size="14" fill="#eef4fb" font-weight="bold" text-anchor="middle">3. Embedding</text>
+  <text x="670" y="135" font-size="12" fill="#9db0c8" text-anchor="middle">Convert to</text>
+  <text x="670" y="155" font-size="12" fill="#9db0c8" text-anchor="middle">vector</text>
+  
+  <!-- Arrow 3 -->
+  <path d="M 770 130 L 830 130" stroke="#34d399" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Stage 4: Retrieval -->
+  <rect x="830" y="80" width="200" height="100" fill="#0d1a2b" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="930" y="110" font-size="14" fill="#eef4fb" font-weight="bold" text-anchor="middle">4. Retrieval</text>
+  <text x="930" y="135" font-size="12" fill="#9db0c8" text-anchor="middle">Top-20 from</text>
+  <text x="930" y="155" font-size="12" fill="#9db0c8" text-anchor="middle">ChromaDB</text>
+  
+  <!-- Arrow down -->
+  <path d="M 930 180 L 930 240" stroke="#34d399" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Stage 5: Reranking -->
+  <rect x="830" y="240" width="200" height="100" fill="#0d1a2b" stroke="#34d399" stroke-width="2" rx="8"/>
+  <text x="930" y="270" font-size="14" fill="#eef4fb" font-weight="bold" text-anchor="middle">5. Reranking</text>
+  <text x="930" y="295" font-size="12" fill="#9db0c8" text-anchor="middle">FlashRank</text>
+  <text x="930" y="315" font-size="12" fill="#9db0c8" text-anchor="middle">Top-5</text>
+  
+  <!-- Arrow left -->
+  <path d="M 830 290 L 620 290" stroke="#34d399" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Stage 6: Generation -->
+  <rect x="420" y="240" width="200" height="100" fill="#0d1a2b" stroke="#ef4444" stroke-width="2" rx="8"/>
+  <text x="520" y="270" font-size="14" fill="#eef4fb" font-weight="bold" text-anchor="middle">6. Generation</text>
+  <text x="520" y="295" font-size="12" fill="#9db0c8" text-anchor="middle">Gemini LLM</text>
+  <text x="520" y="315" font-size="12" fill="#9db0c8" text-anchor="middle">Answer</text>
+  
+  <!-- Arrow down -->
+  <path d="M 520 340 L 520 400" stroke="#34d399" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Stage 7: Verification -->
+  <rect x="420" y="400" width="200" height="100" fill="#0d1a2b" stroke="#63d2ff" stroke-width="2" rx="8"/>
+  <text x="520" y="430" font-size="14" fill="#eef4fb" font-weight="bold" text-anchor="middle">7. Verification</text>
+  <text x="520" y="455" font-size="12" fill="#9db0c8" text-anchor="middle">Hallucination</text>
+  <text x="520" y="475" font-size="12" fill="#9db0c8" text-anchor="middle">check</text>
+  
+  <!-- Arrow down -->
+  <path d="M 520 500 L 520 560" stroke="#34d399" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Final Stage: Response -->
+  <rect x="370" y="560" width="300" height="120" fill="#0d1a2b" stroke="#34d399" stroke-width="3" rx="8"/>
+  <text x="520" y="590" font-size="14" fill="#eef4fb" font-weight="bold" text-anchor="middle">✓ Final Response</text>
+  <text x="520" y="615" font-size="12" fill="#eef4fb" text-anchor="middle">Structured Answer + Citations</text>
+  <text x="520" y="635" font-size="12" fill="#34d399" text-anchor="middle">+ Confidence Score</text>
+  <text x="520" y="655" font-size="12" fill="#9db0c8" text-anchor="middle">+ Source Documents</text>
+  
+  <!-- Side: Database -->
+  <rect x="50" y="240" width="180" height="280" fill="#0d1a2b" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="140" y="270" font-size="13" fill="#eef4fb" font-weight="bold" text-anchor="middle">📊 Data Sources</text>
+  
+  <rect x="65" y="295" width="150" height="50" fill="#0a1423" rx="5"/>
+  <text x="140" y="315" font-size="11" fill="#a78bfa" text-anchor="middle">ChromaDB</text>
+  <text x="140" y="330" font-size="11" fill="#9db0c8" text-anchor="middle">Vector Database</text>
+  
+  <rect x="65" y="360" width="150" height="50" fill="#0a1423" rx="5"/>
+  <text x="140" y="380" font-size="11" fill="#a78bfa" text-anchor="middle">PDF Collection</text>
+  <text x="140" y="395" font-size="11" fill="#9db0c8" text-anchor="middle">87 Chunks</text>
+  
+  <rect x="65" y="425" width="150" height="50" fill="#0a1423" rx="5"/>
+  <text x="140" y="445" font-size="11" fill="#a78bfa" text-anchor="middle">Metadata Index</text>
+  <text x="140" y="460" font-size="11" fill="#9db0c8" text-anchor="middle">5 Documents</text>
+  
+  <!-- Side: Systems -->
+  <rect x="970" y="240" width="180" height="280" fill="#0d1a2b" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="1060" y="270" font-size="13" fill="#eef4fb" font-weight="bold" text-anchor="middle">⚙️ Systems</text>
+  
+  <rect x="985" y="295" width="150" height="50" fill="#0a1423" rx="5"/>
+  <text x="1060" y="315" font-size="11" fill="#a78bfa" text-anchor="middle">Streamlit</text>
+  <text x="1060" y="330" font-size="11" fill="#9db0c8" text-anchor="middle">Web Interface</text>
+  
+  <rect x="985" y="360" width="150" height="50" fill="#0a1423" rx="5"/>
+  <text x="1060" y="380" font-size="11" fill="#a78bfa" text-anchor="middle">Gemini API</text>
+  <text x="1060" y="395" font-size="11" fill="#9db0c8" text-anchor="middle">LLM Processing</text>
+  
+  <rect x="985" y="425" width="150" height="50" fill="#0a1423" rx="5"/>
+  <text x="1060" y="445" font-size="11" fill="#a78bfa" text-anchor="middle">FlashRank</text>
+  <text x="1060" y="460" font-size="11" fill="#9db0c8" text-anchor="middle">Reranking</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34d399" />
+    </marker>
+  </defs>
+</svg>
