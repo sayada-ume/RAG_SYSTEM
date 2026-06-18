@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  hr-assist-pro:
+    build: .
+    container_name: hr-assist-pro
+    ports:
+      - "8501:8501"
+    environment:
+      - GOOGLE_GENAI_API_KEY=${GOOGLE_GENAI_API_KEY}
+      - CHROMA_TELEMETRY_DISABLED=True
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./sample_pdfs:/app/sample_pdfs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

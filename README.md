@@ -3,6 +3,8 @@
 ![HR Assist Pro](https://img.shields.io/badge/Streamlit-1.36.0-FF4B4B?logo=streamlit)
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Docker](https://img.shields.io/badge/Docker-Available-2496ED?logo=docker)
+![Code Quality](https://img.shields.io/badge/Code%20Quality-Professional-brightgreen)
 
 Enterprise-grade HR Retrieval-Augmented Generation (RAG) workflow application built with **Streamlit**, **ChromaDB**, **FlashRank**, and the latest **Google GenAI SDK**.
 
@@ -295,7 +297,19 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-For issues, questions, or suggestions, please open a GitHub issue or contact the maintainers.
+For deployment issues:
+1. Check the [README](README.md)
+2. Review logs for errors
+3. Open a GitHub issue with details
+4. Contact the development team
+
+## Documentation
+
+- **[Architecture](ARCHITECTURE.md)** - System design and components
+- **[Deployment Guide](DEPLOYMENT.md)** - Production deployment instructions
+- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute
+- **[Code of Conduct](CODE_OF_CONDUCT.md)** - Community standards
+- **[License](LICENSE)** - MIT License
 
 ---
 

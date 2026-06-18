@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hr-assist-pro"
+version = "1.0.0"
+description = "Enterprise-grade HR Retrieval-Augmented Generation workflow application"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Sayada", email = "sayadasanu@email.com"}
+]
+keywords = ["rag", "hr", "llm", "gemini", "chromadb", "streamlit"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "streamlit>=1.36.0",
+    "chromadb>=0.5.5",
+    "google-genai>=0.5.0",
+    "pypdf>=4.3.0",
+    "flashrank>=0.2.10",
+    "reportlab>=4.2.0",
+    "python-dotenv>=1.0.1",
+    "pandas>=2.2.2",
+    "numpy>=1.26.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "flake8>=6.0.0",
+    "mypy>=1.4.1",
+    "isort>=5.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sayada-ume/RAG_SYSTEM"
+Documentation = "https://github.com/sayada-ume/RAG_SYSTEM#readme"
+Repository = "https://github.com/sayada-ume/RAG_SYSTEM.git"
+Issues = "https://github.com/sayada-ume/RAG_SYSTEM/issues"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_glob = ["*/migrations/*"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "--cov=. --cov-report=html"

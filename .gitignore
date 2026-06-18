@@ -1,9 +1,5 @@
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Python
+.github/
+.venv/
 __pycache__/
 *.py[cod]
 *$py.class
@@ -24,26 +20,31 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Virtual environments
-.venv
-venv/
-ENV/
-env/
-
-# IDE
-.vscode/
-.idea/
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.env
+.env.local
+.env.*.local
+.DS_Store
+Thumbs.db
+*.log
+logs/
 *.swp
 *.swo
 *~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Application specific
+.vscode/
+.idea/
+*.iml
 chroma_db/
 *.sqlite3
 *.db
 .streamlit/
+node_modules/
+dist/
+.next/
