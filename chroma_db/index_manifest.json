@@ -1,0 +1,50 @@
+{
+  "documents": {
+    "employee_handbook.pdf": {
+      "source": "employee_handbook.pdf",
+      "document_type": "Employee Handbook",
+      "file_path": "C:\\Users\\Sonu\\Desktop\\RAG_SYSTEM\\sample_pdfs\\employee_handbook.pdf",
+      "hash": "ca24a5a021d95b687ada15c87818ca4c5b6dcce9d42fb96f1b857b10e55f09db",
+      "uploaded_at": "2026-06-11T16:54:12+00:00",
+      "pages": 1,
+      "chunks": 1
+    },
+    "leave_policy.pdf": {
+      "source": "leave_policy.pdf",
+      "document_type": "Leave Policy",
+      "file_path": "C:\\Users\\Sonu\\Desktop\\RAG_SYSTEM\\sample_pdfs\\leave_policy.pdf",
+      "hash": "9870b998703c222b349513477407c7f26a253aee8ad32d288238bfe67ae260a9",
+      "uploaded_at": "2026-06-11T16:54:13+00:00",
+      "pages": 1,
+      "chunks": 1
+    },
+    "performance_review_guidelines.pdf": {
+      "source": "performance_review_guidelines.pdf",
+      "document_type": "Performance Review Guidelines",
+      "file_path": "C:\\Users\\Sonu\\Desktop\\RAG_SYSTEM\\sample_pdfs\\performance_review_guidelines.pdf",
+      "hash": "afff3745fb3cb378fe7269745a9dbd430ec450f4f884b01c2ba97b60a5f22915",
+      "uploaded_at": "2026-06-11T16:54:15+00:00",
+      "pages": 1,
+      "chunks": 1
+    },
+    "Performance_Management_Policy.pdf": {
+      "source": "Performance_Management_Policy.pdf",
+      "document_type": "Employee Handbook",
+      "file_path": "C:\\Users\\Sonu\\Desktop\\RAG_SYSTEM\\sample_pdfs\\uploads\\Performance_Management_Policy.pdf",
+      "hash": "54853dca5e46a44c730aab3a230c060a9d811070314940ecd20186007928ebce",
+      "uploaded_at": "2026-06-11T17:54:17+00:00",
+      "pages": 1,
+      "chunks": 1
+    },
+    "Work_From_Home_Policy.pdf": {
+      "source": "Work_From_Home_Policy.pdf",
+      "document_type": "Employee Handbook",
+      "file_path": "C:\\Users\\Sonu\\Desktop\\RAG_SYSTEM\\sample_pdfs\\uploads\\Work_From_Home_Policy.pdf",
+      "hash": "83a509388a45a223892bfc176762f02ac3259f9a0e9c85bc316ab252bf010f56",
+      "uploaded_at": "2026-06-11T17:58:46+00:00",
+      "pages": 1,
+      "chunks": 1
+    }
+  },
+  "last_indexing_timestamp": "2026-06-11T17:58:46+00:00"
+}
